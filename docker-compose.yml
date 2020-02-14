@@ -1,0 +1,17 @@
+version : '3'
+services : 
+  database: 
+    image : mongo
+    restart : always
+  trivago_admin : 
+    build : ./adminService
+    image : trivago/admin
+    container_name : trivago_admin
+    ports : 
+      - 8000:8000
+  trivago_public : 
+    build : ./publicService
+    image : trivago/public
+    container_name : trivago_public
+    ports:
+      - 8001:8001

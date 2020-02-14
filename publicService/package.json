@@ -1,0 +1,28 @@
+{
+  "name": "trivago",
+  "version": "1.0.0",
+  "description": "Moses peter trivago code challenge implementation",
+  "main": "index.js",
+  "repository": "https://github.com/mohemos/trivago.git",
+  "author": "Moses Peter",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon -r dotenv/config index.js",
+    "prod": "node -r dotenv/config index.js",
+    "kill": "kill $(lsof -t -i:8001)",
+    "format": "prettier --single-quote --print-width 80 --trailing-comma es5 --write \"app/**/*.js\""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "iyasunday": "^1.0.45"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "prettier": "^1.19.1"
+  }
+}
